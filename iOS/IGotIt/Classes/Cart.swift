@@ -18,6 +18,7 @@ class Cart
     init()
     {
         itemCount = 0
+        cartItems = [CartItem]()
     }
     
     // Returns the amount of items currently in the cart
@@ -30,7 +31,7 @@ class Cart
     func addItem(newItem : CartItem)
     {
         cartItems.append(newItem)
-        itemCount += newItem.getAmount()
+        itemCount = itemCount + newItem.getAmount()
     }
     
     // Removes the CartItem passed to the function from the cart
