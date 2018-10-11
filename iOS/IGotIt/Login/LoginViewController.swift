@@ -14,7 +14,6 @@ class LoginViewController: UIViewController
     @IBOutlet weak var email_tf: UITextField!
     @IBOutlet weak var password_tf: UITextField!
     @IBOutlet weak var login_btn: UIButton!
-    @IBOutlet weak var login_lbl: UILabel!
     @IBOutlet weak var register_btn: UIButton!
     
     var email : String!
@@ -24,48 +23,57 @@ class LoginViewController: UIViewController
     {
         super.viewDidLoad()
         
+        email_tf.frame.size.height = 0.0517 * self.view.frame.size.height
+        email_tf.layer.cornerRadius = 15
         email_tf.placeholder = "Email"
-        email_tf.layer.cornerRadius = 10
-        email_tf.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        email_tf.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
-        email_tf.layer.shadowOpacity = 1.0
+        email_tf.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        email_tf.layer.shadowOffset = CGSize(width: 0, height: 10)
+        email_tf.layer.shadowOpacity = 0.15
+        email_tf.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        email_tf.borderStyle = UITextField.BorderStyle.none
+        email_tf.layer.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1).cgColor
         
+        let paddingViewEmail = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: email_tf.frame.size.height))
+        email_tf.leftView = paddingViewEmail
+        email_tf.leftViewMode = UITextField.ViewMode.always
+        
+        password_tf.frame.size.height = 0.0517 * self.view.frame.size.height
+        password_tf.layer.cornerRadius = 15
         password_tf.placeholder = "Password"
-        password_tf.layer.cornerRadius = 10
-        password_tf.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        password_tf.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
-        password_tf.layer.shadowOpacity = 1.0
+        password_tf.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        password_tf.layer.shadowOffset = CGSize(width: 0, height: 10)
+        password_tf.layer.shadowOpacity = 0.15
+        password_tf.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        password_tf.borderStyle = UITextField.BorderStyle.none
+        password_tf.layer.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1).cgColor
         
-        email = ""
-        password = ""
+        let paddingViewPassword = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: password_tf.frame.size.height))
+        password_tf.leftView = paddingViewPassword
+        password_tf.leftViewMode = UITextField.ViewMode.always
         
+        login_btn.layer.cornerRadius = 15
         login_btn.setTitle("Login", for: .normal)
-        login_btn.layer.cornerRadius = 10
-        login_btn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        login_btn.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
-        login_btn.layer.shadowOpacity = 1.0
+        login_btn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        login_btn.layer.shadowOffset = CGSize(width: 0, height: 10)
+        login_btn.layer.shadowOpacity = 0.15
+        login_btn.backgroundColor = UIColor(red: 1.05, green: 0.85, blue: -0.38, alpha: 1)
+        login_btn.setTitleColor(UIColor(red: 0.31, green: 0.31, blue: 0.31, alpha: 1), for: .normal)
         
-        login_lbl.text = ""
-        
+        register_btn.layer.cornerRadius = 15
         register_btn.setTitle("Register", for: .normal)
+        register_btn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        register_btn.layer.shadowOffset = CGSize(width: 0, height: 10)
+        register_btn.layer.shadowOpacity = 0.15
+        register_btn.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
+        register_btn.setTitleColor(UIColor(red: 0.31, green: 0.31, blue: 0.31, alpha: 1), for: .normal)
+        
+        self.view.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
     }
     
     @IBAction func loginPressed(_ sender: UIButton)
     {
         email = email_tf.text
         password = password_tf.text
-        /*
-        if(email.uppercased() == "IGOT!T@GMAIL.COM" && password == "soccer")
-        {
-            login_lbl.textColor = UIColor.black
-            login_lbl.text = "Successful Login"
-        }
-        else
-        {
-            login_lbl.textColor = UIColor.red
-            login_lbl.text = "Incorrect email or password"
-        }
-         */
     }
 
 }
