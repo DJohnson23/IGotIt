@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		0E74FD29C5EC973975AB6423 /* Pods_IGotItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CCD96E5201F1EC38FC9A74 /* Pods_IGotItTests.framework */; };
 		1AEAC479C3602AA8CA841AC8 /* Pods_IGotItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66391B7DCED303F8FD032464 /* Pods_IGotItUITests.framework */; };
+		92110BF1216D6AE500E6BF2A /* CategoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92110BF0216D6AE500E6BF2A /* CategoryPage.swift */; };
+		92110BF3216D781800E6BF2A /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92110BF2216D781800E6BF2A /* CategoryViewController.swift */; };
 		9239B3CF2168FEE400CBD675 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239B3CD2168FEE400CBD675 /* LoginViewController.swift */; };
 		9239B3D321699B5200CBD675 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239B3D221699B5200CBD675 /* RegisterViewController.swift */; };
+		9239B3D6216A4DB000CBD675 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239B3D5216A4DB000CBD675 /* MenuViewController.swift */; };
+		9239B3D8216A589200CBD675 /* MenuIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239B3D7216A589200CBD675 /* MenuIconCell.swift */; };
 		92CDDCB821681226000C50FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDDCB721681226000C50FD /* AppDelegate.swift */; };
 		92CDDCBA21681226000C50FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDDCB921681226000C50FD /* ViewController.swift */; };
 		92CDDCBD21681226000C50FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CDDCBB21681226000C50FD /* Main.storyboard */; };
@@ -49,8 +53,12 @@
 		2A03033B69AE9F14259CA605 /* Pods_IGotIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGotIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66391B7DCED303F8FD032464 /* Pods_IGotItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGotItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE747684BC543C8AC33A423 /* Pods-IGotIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGotIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGotIt/Pods-IGotIt.release.xcconfig"; sourceTree = "<group>"; };
+		92110BF0216D6AE500E6BF2A /* CategoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPage.swift; sourceTree = "<group>"; };
+		92110BF2216D781800E6BF2A /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		9239B3CD2168FEE400CBD675 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9239B3D221699B5200CBD675 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9239B3D5216A4DB000CBD675 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		9239B3D7216A589200CBD675 /* MenuIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuIconCell.swift; sourceTree = "<group>"; };
 		92CDDCB421681226000C50FD /* IGotIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGotIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CDDCB721681226000C50FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92CDDCB921681226000C50FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,9 +142,21 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		9239B3D4216A4D9A00CBD675 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				9239B3D5216A4DB000CBD675 /* MenuViewController.swift */,
+				9239B3D7216A589200CBD675 /* MenuIconCell.swift */,
+				92110BF0216D6AE500E6BF2A /* CategoryPage.swift */,
+				92110BF2216D781800E6BF2A /* CategoryViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		92CDDCAB21681226000C50FD = {
 			isa = PBXGroup;
 			children = (
+				9239B3D4216A4D9A00CBD675 /* Menu */,
 				9239B3D121699B1A00CBD675 /* Register */,
 				9239B3CA2168FE9200CBD675 /* Login */,
 				92CDDCE5216812A1000C50FD /* Classes */,
@@ -418,12 +438,16 @@
 			files = (
 				9239B3CF2168FEE400CBD675 /* LoginViewController.swift in Sources */,
 				9239B3D321699B5200CBD675 /* RegisterViewController.swift in Sources */,
+				92110BF3216D781800E6BF2A /* CategoryViewController.swift in Sources */,
 				92CDDCBA21681226000C50FD /* ViewController.swift in Sources */,
 				92CDDCED21681807000C50FD /* Cart.swift in Sources */,
+				9239B3D6216A4DB000CBD675 /* MenuViewController.swift in Sources */,
 				92CDDCE7216812E0000C50FD /* Item.swift in Sources */,
 				92CDDCB821681226000C50FD /* AppDelegate.swift in Sources */,
+				9239B3D8216A589200CBD675 /* MenuIconCell.swift in Sources */,
 				92CDDCF121681FEF000C50FD /* User.swift in Sources */,
 				92CDDCEB21681647000C50FD /* CartItem.swift in Sources */,
+				92110BF1216D6AE500E6BF2A /* CategoryPage.swift in Sources */,
 				92CDDCE921681493000C50FD /* Category.swift in Sources */,
 				92CDDCEF21681E78000C50FD /* Address.swift in Sources */,
 			);

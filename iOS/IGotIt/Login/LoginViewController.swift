@@ -54,7 +54,7 @@ class LoginViewController: UIViewController
     {
         email = email_tf.text
         password = password_tf.text
-        
+        /*
         if(email.uppercased() == "IGOT!T@GMAIL.COM" && password == "soccer")
         {
             login_lbl.textColor = UIColor.black
@@ -65,6 +65,7 @@ class LoginViewController: UIViewController
             login_lbl.textColor = UIColor.red
             login_lbl.text = "Incorrect email or password"
         }
+         */
     }
 
 }
