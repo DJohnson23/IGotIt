@@ -33,9 +33,15 @@ class LoginViewController: UIViewController
         email_tf.borderStyle = UITextField.BorderStyle.none
         email_tf.layer.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1).cgColor
         
-        let paddingViewEmail = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: email_tf.frame.size.height))
+        let paddingViewEmail = UIView(frame: CGRect(x: 0, y: 0, width: email_tf.frame.size.width * 0.15, height: email_tf.frame.size.height))
+        let userImgView = UIImageView(image: UIImage(named: "Gold User"))
+        userImgView.frame.size.height = userImgView.frame.size.height / 2
+        userImgView.frame.size.width = userImgView.frame.size.width / 2
+        paddingViewEmail.addSubview(userImgView)
+        paddingViewEmail.subviews[0].center = CGPoint(x: email_tf.frame.size.width * 0.075, y: paddingViewEmail.frame.size.height * 0.5)
         email_tf.leftView = paddingViewEmail
         email_tf.leftViewMode = UITextField.ViewMode.always
+        
         
         password_tf.frame.size.height = 0.0517 * self.view.frame.size.height
         password_tf.layer.cornerRadius = 15
@@ -47,7 +53,12 @@ class LoginViewController: UIViewController
         password_tf.borderStyle = UITextField.BorderStyle.none
         password_tf.layer.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1).cgColor
         
-        let paddingViewPassword = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: password_tf.frame.size.height))
+        let paddingViewPassword = UIView(frame: CGRect(x: 0, y: 0, width: password_tf.frame.size.width * 0.15, height: password_tf.frame.size.height))
+        let lockImgView = UIImageView(image: UIImage(named: "Gold Lock"))
+        lockImgView.frame.size.height = lockImgView.frame.size.height / 2
+        lockImgView.frame.size.width = lockImgView.frame.size.width / 2
+        paddingViewPassword.addSubview(lockImgView)
+        paddingViewPassword.subviews[0].center = CGPoint(x: password_tf.frame.size.width * 0.075, y: paddingViewPassword.frame.size.height * 0.5)
         password_tf.leftView = paddingViewPassword
         password_tf.leftViewMode = UITextField.ViewMode.always
         
